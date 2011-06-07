@@ -1,0 +1,38 @@
+
+body {
+    position: relative;
+    font-family: georgia, serif;
+    width: 760px;
+    margin: 30px auto 50px;
+    color: #777;
+    letter-spacing: -0.05em;
+    font-size: 20px;
+    background: url(background.jpg) repeat-x top left;
+}
+
+a, a:visited {
+    color: #777;
+}
+
+p {
+    margin: 1em 0 1.5em;
+    text-indent: 0.5em;
+    line-height: 1.4em;
+}
+
+h2 {
+    font-size: 1.5em;
+    letter-spacing: -0.06em;
+}
+
+canvas {
+    display: block;
+    width: 650px;
+    margin: 0 auto 20px;
+    cursor: crosshair;
+}
+
+.instructions, .social {
+    text-align: center;
+    color: #258DC9;
+}

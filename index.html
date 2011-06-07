@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Andrew Hoyer" />
+    <meta name="description" content="Really simple fractals implemented in JS" />
+
+    <title>Andrew Hoyer | Simple Fractals</title>
+    <link rel="stylesheet" href="assets/reset.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="assets/main.css" type="text/css" charset="utf-8">
+    
+    <script src="lib/mootools-1.2.4-core-yc.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="source/cantor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/cantor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/canvas.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/carpet.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/fractals.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/gradient.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/koch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/pythagoras.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/tree.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <p>A fractal is a essentially a geometric (mathematical) pattern. In fact, fractals can be found all around you in your every day life in things like plants, clouds, and even the blood vessels in your body!</p>
+
+    <p class="instructions">Simply move your mouse over the fractals.</p>
+
+    <h2>Cantor Set:</h2>
+    <p>The cantor set was one of the first fractals to be studied in detail and is perhaps one of the simplest to generate. Just take a line, remove some percentage of its length from the middle (eg 1/3). Then continually repeat this process for each sub-line (each line on either side of the newly formed gap).</p>
+    <div class="canvas_wrapper">
+        <canvas width="650px" height="400px" id="cantor_canvas">
+            <div class="no_canvas">
+                <strong>Sorry, It looks as though your browser does not support the canvas tag...</strong> If you can, I suggest that you should try firefox or Safari.
+            </div>
+        </canvas>
+    </div>
+
+    <h2>Pythagoras Tree:</h2>
+    <p>The Pythagoras tree starts with a simple square. Next two slightly smaller squares are placed on top such that their corners match up pairwise (forming a triangle composed of two right triangles). This is then repeated for each "branch" of the tree. By moving your mouse up and down in the middle of the canvas below, a true Pythagoras tree can be seen. If the mouse is moved at all to either side, an asymmetric tree is generated.</p>
+    <div class="canvas_wrapper">
+        <canvas width="650px" height="393px" id="pythagoras_canvas">
+            <div class="no_canvas">
+                <strong>Sorry, It looks as though your browser does not support the canvas tag...</strong> If you can, I suggest that you should try firefox or Safari.
+            </div>
+        </canvas>
+    </div>
+
+    <h2>Koch Curve:</h2>
+    <p>The koch curve (if you want to call it a curve) is created by taking a line segment, dividing it into thirds and constructing an equilateral triangle in place of the center third of the original segment. An interesting fact about the Koch curve is that it has infinite length as at each step in the generation process the overall length of the line is increased by one third. As well for the math nerds out there: The Koch curve is continuous but not differentiable.</p>
+    <div class="canvas_wrapper">
+        <canvas width="650px" height="295x" id="koch_canvas">
+            <div class="no_canvas">
+                <strong>Sorry, It looks as though your browser does not support the canvas tag...</strong> If you can, I suggest that you should try firefox or Safari.
+            </div>  
+        </canvas>
+    </div>
+
+    <h2>H-Tree:</h2>
+    <p>An H-Tree is constructed very much like a real tree (though not random by any means). It gets it's name from the fact that when the angle between the two branches is 180 degrees, an H shape is formed. Oddly enough, this pattern has been found to be useful in designing small antenna.</p>
+    <div class="canvas_wrapper">
+        <canvas width="650px" height="470px" id="tree_canvas">
+            <div class="no_canvas">
+                <strong>Sorry, It looks as though your browser does not support the canvas tag...</strong> If you can, I suggest that you should try firefox or Safari.
+            </div>
+    </canvas>
+    </div>
+
+    <h2>Sierpinski Carpet:</h2>
+    <p>The Sierpinski Carpet is created by dividing the original shape into 9 squares then removing the center square. This process is then repeated recursively for the other 8 squares. Fun fact about the Sierpinski carpet: If an infinite number of iterations is performed, the total surface area of the carpet is eventually reduced to zero.</p>
+    <div class="canvas_wrapper">
+        <canvas width="650px" height="500px" id="carpet_canvas">
+            <div class="no_canvas">
+                <strong>Sorry, It looks as though your browser does not support the canvas tag...</strong> If you can, I suggest that you should try firefox or Safari.
+            </div>
+        </canvas>
+    </div>
+
+    <p>If you're interested, <a href="/blog/2010/05/17/fractals/">click here to read about some of the implementation details.</a></p>
+    <p class="social">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.andrew-hoyer.com/experiments/sudoku/&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-text="Simple Sudoku Solver by @ndrwhr:" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </p>
+
+    <p class="social"><a href="http://andrew-hoyer.com/experiments/">More Experiments</a></p>
+
+</body>
+</html>
